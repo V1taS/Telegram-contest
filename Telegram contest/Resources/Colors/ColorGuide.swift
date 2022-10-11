@@ -15,4 +15,7 @@ struct ColorGuide {
   
   /// Black color
   let primaryBlack = UIColor(light: .primaryBlack, dark: .primaryWhite)
+  
+  /// Blue color
+  let primaryBlue = UIColor(light: .primaryBlue, dark: .primaryBlue)
 }

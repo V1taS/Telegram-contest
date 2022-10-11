@@ -15,4 +15,7 @@ enum ColorToken: String {
   
   /// Black color
   case primaryBlack = "000000"
+  
+  /// Blue color
+  case primaryBlue = "007AFF"
 }
