@@ -29,6 +29,7 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
   
   private let navigationController: UINavigationController
   private var mainScreenModule: MainScreenModule?
+  private var anyCoordinator: AnyObject?
   private let services: ApplicationServices
   
   // MARK: - Initialization
@@ -56,3 +57,19 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
 // MARK: - MainScreenModuleOutput
 
 extension MainScreenCoordinator: MainScreenModuleOutput {}
+
+// MARK: - PermissionScreenCoordinatorOutput
+
+extension MainScreenCoordinator: PermissionScreenCoordinatorOutput {}
+
+// MARK: - Private
+
+private extension MainScreenCoordinator {
+  func startPermissionScreenCoordinator() {
+    let permissionScreenCoordinator = PermissionScreenCoordinator(navigationController,
+                                                                  services)
+    permissionScreenCoordinator.output = self
+    anyCoordinator = permissionScreenCoordinator
+    permissionScreenCoordinator.start()
+  }
+}

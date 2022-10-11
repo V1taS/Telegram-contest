@@ -26,6 +26,7 @@
 		1BDFAC3A28F5793300DB536A /* PermissionScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC3528F5793200DB536A /* PermissionScreenAssembly.swift */; };
 		1BDFAC3B28F5793300DB536A /* PermissionScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC3628F5793300DB536A /* PermissionScreenInteractor.swift */; };
 		1BDFAC3C28F5793300DB536A /* PermissionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC3728F5793300DB536A /* PermissionScreenView.swift */; };
+		1BDFAC4428F57B2E00DB536A /* PermissionScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC4328F57B2E00DB536A /* PermissionScreenCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		1BDFAC3528F5793200DB536A /* PermissionScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenAssembly.swift; sourceTree = "<group>"; };
 		1BDFAC3628F5793300DB536A /* PermissionScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenInteractor.swift; sourceTree = "<group>"; };
 		1BDFAC3728F5793300DB536A /* PermissionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenView.swift; sourceTree = "<group>"; };
+		1BDFAC4328F57B2E00DB536A /* PermissionScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		1BDFAC1228F5649700DB536A /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				1BDFAC4228F57B1900DB536A /* PermissionScreenCoordinator */,
 				1BDFAC1C28F5662F00DB536A /* MainScreenCoordinator */,
 				1BDFAC1328F564A600DB536A /* Coordinator.swift */,
 				1BDFAC1528F564D400DB536A /* RootCoordinator.swift */,
@@ -258,6 +261,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		1BDFAC4228F57B1900DB536A /* PermissionScreenCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC4328F57B2E00DB536A /* PermissionScreenCoordinator.swift */,
+			);
+			path = PermissionScreenCoordinator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BDFAC2728F566A500DB536A /* MainScreenFactory.swift in Sources */,
+				1BDFAC4428F57B2E00DB536A /* PermissionScreenCoordinator.swift in Sources */,
 				1BDFAC2928F566A500DB536A /* MainScreenAssembly.swift in Sources */,
 				1BDFAC1428F564A600DB536A /* Coordinator.swift in Sources */,
 				1BDFAC3A28F5793300DB536A /* PermissionScreenAssembly.swift in Sources */,
