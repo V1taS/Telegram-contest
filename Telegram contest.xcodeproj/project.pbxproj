@@ -21,6 +21,11 @@
 		1BDFAC2928F566A500DB536A /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC2428F566A500DB536A /* MainScreenAssembly.swift */; };
 		1BDFAC2A28F566A500DB536A /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC2528F566A500DB536A /* MainScreenInteractor.swift */; };
 		1BDFAC2B28F566A500DB536A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC2628F566A500DB536A /* MainScreenView.swift */; };
+		1BDFAC3828F5793300DB536A /* PermissionScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC3328F5793200DB536A /* PermissionScreenFactory.swift */; };
+		1BDFAC3928F5793300DB536A /* PermissionScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC3428F5793200DB536A /* PermissionScreenViewController.swift */; };
+		1BDFAC3A28F5793300DB536A /* PermissionScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC3528F5793200DB536A /* PermissionScreenAssembly.swift */; };
+		1BDFAC3B28F5793300DB536A /* PermissionScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC3628F5793300DB536A /* PermissionScreenInteractor.swift */; };
+		1BDFAC3C28F5793300DB536A /* PermissionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC3728F5793300DB536A /* PermissionScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		1BDFAC2428F566A500DB536A /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
 		1BDFAC2528F566A500DB536A /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
 		1BDFAC2628F566A500DB536A /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		1BDFAC3328F5793200DB536A /* PermissionScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenFactory.swift; sourceTree = "<group>"; };
+		1BDFAC3428F5793200DB536A /* PermissionScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenViewController.swift; sourceTree = "<group>"; };
+		1BDFAC3528F5793200DB536A /* PermissionScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenAssembly.swift; sourceTree = "<group>"; };
+		1BDFAC3628F5793300DB536A /* PermissionScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenInteractor.swift; sourceTree = "<group>"; };
+		1BDFAC3728F5793300DB536A /* PermissionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,7 @@
 		1BDFAC1028F5648700DB536A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1BDFAC3228F5791500DB536A /* PermissionScreenModule */,
 				1BDFAC1F28F5668100DB536A /* MainScreenModule */,
 			);
 			path = Modules;
@@ -195,6 +206,58 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1BDFAC3228F5791500DB536A /* PermissionScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC4128F5795C00DB536A /* Interactor */,
+				1BDFAC4028F5794F00DB536A /* Factory */,
+				1BDFAC3F28F5794900DB536A /* Assembly */,
+				1BDFAC3E28F5794400DB536A /* Presenter */,
+				1BDFAC3D28F5793E00DB536A /* View */,
+			);
+			path = PermissionScreenModule;
+			sourceTree = "<group>";
+		};
+		1BDFAC3D28F5793E00DB536A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC3728F5793300DB536A /* PermissionScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1BDFAC3E28F5794400DB536A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC3428F5793200DB536A /* PermissionScreenViewController.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1BDFAC3F28F5794900DB536A /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC3528F5793200DB536A /* PermissionScreenAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		1BDFAC4028F5794F00DB536A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC3328F5793200DB536A /* PermissionScreenFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		1BDFAC4128F5795C00DB536A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC3628F5793300DB536A /* PermissionScreenInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,14 +331,19 @@
 				1BDFAC2728F566A500DB536A /* MainScreenFactory.swift in Sources */,
 				1BDFAC2928F566A500DB536A /* MainScreenAssembly.swift in Sources */,
 				1BDFAC1428F564A600DB536A /* Coordinator.swift in Sources */,
+				1BDFAC3A28F5793300DB536A /* PermissionScreenAssembly.swift in Sources */,
+				1BDFAC3828F5793300DB536A /* PermissionScreenFactory.swift in Sources */,
 				1BDFAC1828F5651D00DB536A /* ApplicationServices.swift in Sources */,
 				1BDFAC2A28F566A500DB536A /* MainScreenInteractor.swift in Sources */,
 				1BDFAC1B28F5659300DB536A /* PermissionService.swift in Sources */,
+				1BDFAC3928F5793300DB536A /* PermissionScreenViewController.swift in Sources */,
 				1BDFAC2828F566A500DB536A /* MainScreenViewController.swift in Sources */,
 				1BDFAC1628F564D400DB536A /* RootCoordinator.swift in Sources */,
 				1BDFABFC28F5641C00DB536A /* AppDelegate.swift in Sources */,
 				1BDFABFE28F5641C00DB536A /* SceneDelegate.swift in Sources */,
 				1BDFAC1E28F5663C00DB536A /* MainScreenCoordinator.swift in Sources */,
+				1BDFAC3C28F5793300DB536A /* PermissionScreenView.swift in Sources */,
+				1BDFAC3B28F5793300DB536A /* PermissionScreenInteractor.swift in Sources */,
 				1BDFAC2B28F566A500DB536A /* MainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
