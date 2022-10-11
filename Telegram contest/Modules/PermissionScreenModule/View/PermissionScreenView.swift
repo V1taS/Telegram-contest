@@ -71,7 +71,8 @@ private extension PermissionScreenView {
   }
   
   func applyDefaultBehavior() {
-    backgroundColor = TGColor.primaryWhite
+    backgroundColor = TGColor.primaryBlack
+    buttonView.setTitle("Allow Access", for: .normal)
   }
 }
 
