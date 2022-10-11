@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		1BDFABFC28F5641C00DB536A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFABFB28F5641C00DB536A /* AppDelegate.swift */; };
 		1BDFABFE28F5641C00DB536A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFABFD28F5641C00DB536A /* SceneDelegate.swift */; };
-		1BDFAC0028F5641C00DB536A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFABFF28F5641C00DB536A /* ViewController.swift */; };
-		1BDFAC0328F5641C00DB536A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BDFAC0128F5641C00DB536A /* Main.storyboard */; };
 		1BDFAC0528F5641D00DB536A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDFAC0428F5641D00DB536A /* Assets.xcassets */; };
 		1BDFAC0828F5641D00DB536A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BDFAC0628F5641D00DB536A /* LaunchScreen.storyboard */; };
+		1BDFAC1428F564A600DB536A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC1328F564A600DB536A /* Coordinator.swift */; };
+		1BDFAC1628F564D400DB536A /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC1528F564D400DB536A /* RootCoordinator.swift */; };
+		1BDFAC1828F5651D00DB536A /* ApplicationServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC1728F5651D00DB536A /* ApplicationServices.swift */; };
+		1BDFAC1B28F5659300DB536A /* PermissionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC1A28F5659300DB536A /* PermissionService.swift */; };
+		1BDFAC1E28F5663C00DB536A /* MainScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC1D28F5663C00DB536A /* MainScreenCoordinator.swift */; };
+		1BDFAC2728F566A500DB536A /* MainScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC2228F566A500DB536A /* MainScreenFactory.swift */; };
+		1BDFAC2828F566A500DB536A /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC2328F566A500DB536A /* MainScreenViewController.swift */; };
+		1BDFAC2928F566A500DB536A /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC2428F566A500DB536A /* MainScreenAssembly.swift */; };
+		1BDFAC2A28F566A500DB536A /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC2528F566A500DB536A /* MainScreenInteractor.swift */; };
+		1BDFAC2B28F566A500DB536A /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC2628F566A500DB536A /* MainScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1BDFABF828F5641C00DB536A /* Telegram contest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telegram contest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDFABFB28F5641C00DB536A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BDFABFD28F5641C00DB536A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1BDFABFF28F5641C00DB536A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1BDFAC0228F5641C00DB536A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BDFAC0428F5641D00DB536A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BDFAC0728F5641D00DB536A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BDFAC0928F5641D00DB536A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BDFAC1328F564A600DB536A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1BDFAC1528F564D400DB536A /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		1BDFAC1728F5651D00DB536A /* ApplicationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServices.swift; sourceTree = "<group>"; };
+		1BDFAC1A28F5659300DB536A /* PermissionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionService.swift; sourceTree = "<group>"; };
+		1BDFAC1D28F5663C00DB536A /* MainScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoordinator.swift; sourceTree = "<group>"; };
+		1BDFAC2228F566A500DB536A /* MainScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenFactory.swift; sourceTree = "<group>"; };
+		1BDFAC2328F566A500DB536A /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		1BDFAC2428F566A500DB536A /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
+		1BDFAC2528F566A500DB536A /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
+		1BDFAC2628F566A500DB536A /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,127 @@
 		1BDFABFA28F5641C00DB536A /* Telegram contest */ = {
 			isa = PBXGroup;
 			children = (
-				1BDFABFB28F5641C00DB536A /* AppDelegate.swift */,
+				1BDFAC3128F56A6400DB536A /* Resources */,
+				1BDFAC1228F5649700DB536A /* Navigation */,
+				1BDFAC1128F5649000DB536A /* ApplicationServices */,
+				1BDFAC1028F5648700DB536A /* Modules */,
+				1BDFAC0F28F5647F00DB536A /* System */,
+			);
+			path = "Telegram contest";
+			sourceTree = "<group>";
+		};
+		1BDFAC0F28F5647F00DB536A /* System */ = {
+			isa = PBXGroup;
+			children = (
 				1BDFABFD28F5641C00DB536A /* SceneDelegate.swift */,
-				1BDFABFF28F5641C00DB536A /* ViewController.swift */,
-				1BDFAC0128F5641C00DB536A /* Main.storyboard */,
-				1BDFAC0428F5641D00DB536A /* Assets.xcassets */,
+				1BDFABFB28F5641C00DB536A /* AppDelegate.swift */,
 				1BDFAC0628F5641D00DB536A /* LaunchScreen.storyboard */,
 				1BDFAC0928F5641D00DB536A /* Info.plist */,
 			);
-			path = "Telegram contest";
+			path = System;
+			sourceTree = "<group>";
+		};
+		1BDFAC1028F5648700DB536A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC1F28F5668100DB536A /* MainScreenModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1BDFAC1128F5649000DB536A /* ApplicationServices */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC1928F5658700DB536A /* PermissionService */,
+				1BDFAC1728F5651D00DB536A /* ApplicationServices.swift */,
+			);
+			path = ApplicationServices;
+			sourceTree = "<group>";
+		};
+		1BDFAC1228F5649700DB536A /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC1C28F5662F00DB536A /* MainScreenCoordinator */,
+				1BDFAC1328F564A600DB536A /* Coordinator.swift */,
+				1BDFAC1528F564D400DB536A /* RootCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		1BDFAC1928F5658700DB536A /* PermissionService */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC1A28F5659300DB536A /* PermissionService.swift */,
+			);
+			path = PermissionService;
+			sourceTree = "<group>";
+		};
+		1BDFAC1C28F5662F00DB536A /* MainScreenCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC1D28F5663C00DB536A /* MainScreenCoordinator.swift */,
+			);
+			path = MainScreenCoordinator;
+			sourceTree = "<group>";
+		};
+		1BDFAC1F28F5668100DB536A /* MainScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC3028F5672200DB536A /* View */,
+				1BDFAC2F28F5671B00DB536A /* Presenter */,
+				1BDFAC2E28F5671400DB536A /* Assembly */,
+				1BDFAC2D28F5670C00DB536A /* Factory */,
+				1BDFAC2C28F5670400DB536A /* Interactor */,
+			);
+			path = MainScreenModule;
+			sourceTree = "<group>";
+		};
+		1BDFAC2C28F5670400DB536A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC2528F566A500DB536A /* MainScreenInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1BDFAC2D28F5670C00DB536A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC2228F566A500DB536A /* MainScreenFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		1BDFAC2E28F5671400DB536A /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC2428F566A500DB536A /* MainScreenAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		1BDFAC2F28F5671B00DB536A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC2328F566A500DB536A /* MainScreenViewController.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1BDFAC3028F5672200DB536A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC2628F566A500DB536A /* MainScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1BDFAC3128F56A6400DB536A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC0428F5641D00DB536A /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +255,6 @@
 			files = (
 				1BDFAC0828F5641D00DB536A /* LaunchScreen.storyboard in Resources */,
 				1BDFAC0528F5641D00DB536A /* Assets.xcassets in Resources */,
-				1BDFAC0328F5641C00DB536A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +265,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BDFAC0028F5641C00DB536A /* ViewController.swift in Sources */,
+				1BDFAC2728F566A500DB536A /* MainScreenFactory.swift in Sources */,
+				1BDFAC2928F566A500DB536A /* MainScreenAssembly.swift in Sources */,
+				1BDFAC1428F564A600DB536A /* Coordinator.swift in Sources */,
+				1BDFAC1828F5651D00DB536A /* ApplicationServices.swift in Sources */,
+				1BDFAC2A28F566A500DB536A /* MainScreenInteractor.swift in Sources */,
+				1BDFAC1B28F5659300DB536A /* PermissionService.swift in Sources */,
+				1BDFAC2828F566A500DB536A /* MainScreenViewController.swift in Sources */,
+				1BDFAC1628F564D400DB536A /* RootCoordinator.swift in Sources */,
 				1BDFABFC28F5641C00DB536A /* AppDelegate.swift in Sources */,
 				1BDFABFE28F5641C00DB536A /* SceneDelegate.swift in Sources */,
+				1BDFAC1E28F5663C00DB536A /* MainScreenCoordinator.swift in Sources */,
+				1BDFAC2B28F566A500DB536A /* MainScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1BDFAC0128F5641C00DB536A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1BDFAC0228F5641C00DB536A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1BDFAC0628F5641D00DB536A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -289,10 +417,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 34VDSPZYU9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Telegram contest/Info.plist";
+				INFOPLIST_FILE = "Telegram contest/System/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +444,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 34VDSPZYU9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Telegram contest/Info.plist";
+				INFOPLIST_FILE = "Telegram contest/System/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
