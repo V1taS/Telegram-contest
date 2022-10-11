@@ -23,6 +23,11 @@ final class PermissionScreenView: PermissionScreenViewProtocol {
   
   weak var output: PermissionScreenViewOutput?
   
+  // MARK: - Private properties
+  
+  private let containerView = UIView()
+  private let buttonView = ButtonView()
+  
   // MARK: - Initialization
   
   override init(frame: CGRect) {
@@ -43,11 +48,30 @@ final class PermissionScreenView: PermissionScreenViewProtocol {
 
 private extension PermissionScreenView {
   func configureLayout() {
+    [buttonView].forEach {
+      $0.translatesAutoresizingMaskIntoConstraints = false
+      containerView.addSubview($0)
+    }
     
+    [containerView].forEach {
+      $0.translatesAutoresizingMaskIntoConstraints = false
+      addSubview($0)
+    }
+    
+    NSLayoutConstraint.activate([
+      containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
+      containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+      containerView.centerYAnchor.constraint(equalTo: centerYAnchor),
+      
+      buttonView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
+      buttonView.topAnchor.constraint(equalTo: containerView.topAnchor),
+      buttonView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
+      buttonView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+    ])
   }
   
   func applyDefaultBehavior() {
-    backgroundColor = .yellow
+    backgroundColor = TGColor.primaryWhite
   }
 }
 

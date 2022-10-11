@@ -32,6 +32,12 @@
 		1BDFAC4C28F5871800DB536A /* ColorToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC4B28F5871800DB536A /* ColorToken.swift */; };
 		1BDFAC4E28F5873800DB536A /* ColorGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC4D28F5873800DB536A /* ColorGuide.swift */; };
 		1BDFAC5028F5875000DB536A /* UIColor+Guide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC4F28F5875000DB536A /* UIColor+Guide.swift */; };
+		1BDFAC5728F58A5100DB536A /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC5628F58A5100DB536A /* ButtonView.swift */; };
+		1BDFAC5928F5D13500DB536A /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC5828F5D13500DB536A /* GradientView.swift */; };
+		1BDFAC5E28F5DE1C00DB536A /* UIFont+DynamicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC5D28F5DE1C00DB536A /* UIFont+DynamicProvider.swift */; };
+		1BDFAC6028F5DE4600DB536A /* FontGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC5F28F5DE4600DB536A /* FontGuide.swift */; };
+		1BDFAC6228F5DE5B00DB536A /* FontToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC6128F5DE5B00DB536A /* FontToken.swift */; };
+		1BDFAC6428F5DE7300DB536A /* UIFont+Guide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC6328F5DE7300DB536A /* UIFont+Guide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +68,12 @@
 		1BDFAC4B28F5871800DB536A /* ColorToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorToken.swift; sourceTree = "<group>"; };
 		1BDFAC4D28F5873800DB536A /* ColorGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGuide.swift; sourceTree = "<group>"; };
 		1BDFAC4F28F5875000DB536A /* UIColor+Guide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Guide.swift"; sourceTree = "<group>"; };
+		1BDFAC5628F58A5100DB536A /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		1BDFAC5828F5D13500DB536A /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		1BDFAC5D28F5DE1C00DB536A /* UIFont+DynamicProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+DynamicProvider.swift"; sourceTree = "<group>"; };
+		1BDFAC5F28F5DE4600DB536A /* FontGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontGuide.swift; sourceTree = "<group>"; };
+		1BDFAC6128F5DE5B00DB536A /* FontToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontToken.swift; sourceTree = "<group>"; };
+		1BDFAC6328F5DE7300DB536A /* UIFont+Guide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Guide.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,8 +226,10 @@
 		1BDFAC3128F56A6400DB536A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1BDFAC5B28F5DDF800DB536A /* Fonts */,
+				1BDFAC5228F58A1900DB536A /* UIComponents */,
+				1BDFAC5128F589F600DB536A /* Images */,
 				1BDFAC4528F5869900DB536A /* Colors */,
-				1BDFAC0428F5641D00DB536A /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -300,6 +314,58 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		1BDFAC5128F589F600DB536A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC0428F5641D00DB536A /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		1BDFAC5228F58A1900DB536A /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC5A28F5DCE600DB536A /* GradientView */,
+				1BDFAC5328F58A2600DB536A /* ButtonView */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		1BDFAC5328F58A2600DB536A /* ButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC5628F58A5100DB536A /* ButtonView.swift */,
+			);
+			path = ButtonView;
+			sourceTree = "<group>";
+		};
+		1BDFAC5A28F5DCE600DB536A /* GradientView */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC5828F5D13500DB536A /* GradientView.swift */,
+			);
+			path = GradientView;
+			sourceTree = "<group>";
+		};
+		1BDFAC5B28F5DDF800DB536A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC5C28F5DE0800DB536A /* Extension */,
+				1BDFAC5F28F5DE4600DB536A /* FontGuide.swift */,
+				1BDFAC6128F5DE5B00DB536A /* FontToken.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1BDFAC5C28F5DE0800DB536A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC6328F5DE7300DB536A /* UIFont+Guide.swift */,
+				1BDFAC5D28F5DE1C00DB536A /* UIFont+DynamicProvider.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -372,6 +438,10 @@
 			files = (
 				1BDFAC2728F566A500DB536A /* MainScreenFactory.swift in Sources */,
 				1BDFAC4428F57B2E00DB536A /* PermissionScreenCoordinator.swift in Sources */,
+				1BDFAC6428F5DE7300DB536A /* UIFont+Guide.swift in Sources */,
+				1BDFAC6228F5DE5B00DB536A /* FontToken.swift in Sources */,
+				1BDFAC5728F58A5100DB536A /* ButtonView.swift in Sources */,
+				1BDFAC5E28F5DE1C00DB536A /* UIFont+DynamicProvider.swift in Sources */,
 				1BDFAC2928F566A500DB536A /* MainScreenAssembly.swift in Sources */,
 				1BDFAC1428F564A600DB536A /* Coordinator.swift in Sources */,
 				1BDFAC3A28F5793300DB536A /* PermissionScreenAssembly.swift in Sources */,
@@ -391,6 +461,8 @@
 				1BDFAC1E28F5663C00DB536A /* MainScreenCoordinator.swift in Sources */,
 				1BDFAC4C28F5871800DB536A /* ColorToken.swift in Sources */,
 				1BDFAC3C28F5793300DB536A /* PermissionScreenView.swift in Sources */,
+				1BDFAC5928F5D13500DB536A /* GradientView.swift in Sources */,
+				1BDFAC6028F5DE4600DB536A /* FontGuide.swift in Sources */,
 				1BDFAC3B28F5793300DB536A /* PermissionScreenInteractor.swift in Sources */,
 				1BDFAC2B28F566A500DB536A /* MainScreenView.swift in Sources */,
 			);
