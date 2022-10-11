@@ -11,12 +11,16 @@ import Photos
 protocol PermissionService {
   
   /// Request access to the Camera
-  /// - Parameter granted: Access granted
+  /// - Parameter status: Access granted
   func requestCamera(_ status: ((_ granted: Bool) -> Void)?)
   
   /// Request access to the Gallery
-  /// - Parameter granted: Access granted
+  /// - Parameter status: Access granted
   func requestPhotos(_ status: ((_ granted: Bool) -> Void)?)
+  
+  /// Get authorization status to the Gallery
+  /// - Parameter status: Access granted
+  func isAuthorizationStatus() -> Bool
 }
 
 final class PermissionServiceImpl: PermissionService {
@@ -55,6 +59,17 @@ final class PermissionServiceImpl: PermissionService {
           }
         }
       })
+    }
+  }
+  
+  func isAuthorizationStatus() -> Bool {
+    switch PHPhotoLibrary.authorizationStatus() {
+    case .denied, .notDetermined, .restricted:
+      return false
+    case .authorized, .limited:
+      return true
+    @unknown default:
+      return false
     }
   }
 }

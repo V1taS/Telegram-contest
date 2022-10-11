@@ -47,7 +47,7 @@ private extension PermissionScreenView {
   }
   
   func applyDefaultBehavior() {
-    backgroundColor = .white
+    backgroundColor = .yellow
   }
 }
 

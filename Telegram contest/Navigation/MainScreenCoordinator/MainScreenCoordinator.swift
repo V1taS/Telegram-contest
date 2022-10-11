@@ -51,6 +51,10 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
     self.mainScreenModule?.moduleOutput = self
     
     navigationController.pushViewController(mainScreenModule, animated: true)
+    
+    if !services.permissionService.isAuthorizationStatus() {
+      startPermissionScreenCoordinator()
+    }
   }
 }
 
