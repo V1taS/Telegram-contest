@@ -27,6 +27,11 @@
 		1BDFAC3B28F5793300DB536A /* PermissionScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC3628F5793300DB536A /* PermissionScreenInteractor.swift */; };
 		1BDFAC3C28F5793300DB536A /* PermissionScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC3728F5793300DB536A /* PermissionScreenView.swift */; };
 		1BDFAC4428F57B2E00DB536A /* PermissionScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC4328F57B2E00DB536A /* PermissionScreenCoordinator.swift */; };
+		1BDFAC4828F586BE00DB536A /* UIColor+DynamicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC4728F586BE00DB536A /* UIColor+DynamicProvider.swift */; };
+		1BDFAC4A28F586E000DB536A /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC4928F586E000DB536A /* UIColor+Hex.swift */; };
+		1BDFAC4C28F5871800DB536A /* ColorToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC4B28F5871800DB536A /* ColorToken.swift */; };
+		1BDFAC4E28F5873800DB536A /* ColorGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC4D28F5873800DB536A /* ColorGuide.swift */; };
+		1BDFAC5028F5875000DB536A /* UIColor+Guide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFAC4F28F5875000DB536A /* UIColor+Guide.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +57,11 @@
 		1BDFAC3628F5793300DB536A /* PermissionScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenInteractor.swift; sourceTree = "<group>"; };
 		1BDFAC3728F5793300DB536A /* PermissionScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenView.swift; sourceTree = "<group>"; };
 		1BDFAC4328F57B2E00DB536A /* PermissionScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionScreenCoordinator.swift; sourceTree = "<group>"; };
+		1BDFAC4728F586BE00DB536A /* UIColor+DynamicProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DynamicProvider.swift"; sourceTree = "<group>"; };
+		1BDFAC4928F586E000DB536A /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		1BDFAC4B28F5871800DB536A /* ColorToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorToken.swift; sourceTree = "<group>"; };
+		1BDFAC4D28F5873800DB536A /* ColorGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGuide.swift; sourceTree = "<group>"; };
+		1BDFAC4F28F5875000DB536A /* UIColor+Guide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Guide.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +214,7 @@
 		1BDFAC3128F56A6400DB536A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1BDFAC4528F5869900DB536A /* Colors */,
 				1BDFAC0428F5641D00DB536A /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -267,6 +278,26 @@
 				1BDFAC4328F57B2E00DB536A /* PermissionScreenCoordinator.swift */,
 			);
 			path = PermissionScreenCoordinator;
+			sourceTree = "<group>";
+		};
+		1BDFAC4528F5869900DB536A /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC4B28F5871800DB536A /* ColorToken.swift */,
+				1BDFAC4D28F5873800DB536A /* ColorGuide.swift */,
+				1BDFAC4628F586B200DB536A /* Extension */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		1BDFAC4628F586B200DB536A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1BDFAC4F28F5875000DB536A /* UIColor+Guide.swift */,
+				1BDFAC4728F586BE00DB536A /* UIColor+DynamicProvider.swift */,
+				1BDFAC4928F586E000DB536A /* UIColor+Hex.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,14 +377,19 @@
 				1BDFAC3A28F5793300DB536A /* PermissionScreenAssembly.swift in Sources */,
 				1BDFAC3828F5793300DB536A /* PermissionScreenFactory.swift in Sources */,
 				1BDFAC1828F5651D00DB536A /* ApplicationServices.swift in Sources */,
+				1BDFAC4828F586BE00DB536A /* UIColor+DynamicProvider.swift in Sources */,
+				1BDFAC5028F5875000DB536A /* UIColor+Guide.swift in Sources */,
 				1BDFAC2A28F566A500DB536A /* MainScreenInteractor.swift in Sources */,
+				1BDFAC4A28F586E000DB536A /* UIColor+Hex.swift in Sources */,
 				1BDFAC1B28F5659300DB536A /* PermissionService.swift in Sources */,
 				1BDFAC3928F5793300DB536A /* PermissionScreenViewController.swift in Sources */,
+				1BDFAC4E28F5873800DB536A /* ColorGuide.swift in Sources */,
 				1BDFAC2828F566A500DB536A /* MainScreenViewController.swift in Sources */,
 				1BDFAC1628F564D400DB536A /* RootCoordinator.swift in Sources */,
 				1BDFABFC28F5641C00DB536A /* AppDelegate.swift in Sources */,
 				1BDFABFE28F5641C00DB536A /* SceneDelegate.swift in Sources */,
 				1BDFAC1E28F5663C00DB536A /* MainScreenCoordinator.swift in Sources */,
+				1BDFAC4C28F5871800DB536A /* ColorToken.swift in Sources */,
 				1BDFAC3C28F5793300DB536A /* PermissionScreenView.swift in Sources */,
 				1BDFAC3B28F5793300DB536A /* PermissionScreenInteractor.swift in Sources */,
 				1BDFAC2B28F566A500DB536A /* MainScreenView.swift in Sources */,
