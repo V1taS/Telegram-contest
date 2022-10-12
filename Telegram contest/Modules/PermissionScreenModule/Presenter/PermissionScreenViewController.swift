@@ -8,7 +8,14 @@
 import UIKit
 
 /// Events that we send from `current module` to `another module`
-protocol PermissionScreenModuleOutput: AnyObject {}
+protocol PermissionScreenModuleOutput: AnyObject {
+  
+  /// Gallery accessed
+  func requestPhotosSuccess()
+  
+  /// Gallery not accessed
+  func requestPhotosError()
+}
 
 /// Events sent from `another module` to `current module`
 protocol PermissionScreenModuleInput {
@@ -58,12 +65,6 @@ final class PermissionScreenViewController: PermissionScreenModule {
     view = moduleView
   }
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    // TODO: - ...
-  }
-  
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
@@ -79,11 +80,23 @@ final class PermissionScreenViewController: PermissionScreenModule {
 
 // MARK: - PermissionScreenViewOutput
 
-extension PermissionScreenViewController: PermissionScreenViewOutput {}
+extension PermissionScreenViewController: PermissionScreenViewOutput {
+  func buttonAction() {
+    interactor.requestPhotosStatus()
+  }
+}
 
 // MARK: - PermissionScreenInteractorOutput
 
-extension PermissionScreenViewController: PermissionScreenInteractorOutput {}
+extension PermissionScreenViewController: PermissionScreenInteractorOutput {
+  func requestPhotosSuccess() {
+    moduleOutput?.requestPhotosSuccess()
+  }
+  
+  func requestPhotosError() {
+    moduleOutput?.requestPhotosError()
+  }
+}
 
 // MARK: - PermissionScreenFactoryOutput
 

@@ -652,6 +652,9 @@
 				DEVELOPMENT_TEAM = 34VDSPZYU9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Telegram contest/System/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please provide access to the Camera";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please provide access to the Photo Library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please provide access to the Photo Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -679,6 +682,9 @@
 				DEVELOPMENT_TEAM = 34VDSPZYU9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Telegram contest/System/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please provide access to the Camera";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please provide access to the Photo Library";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please provide access to the Photo Library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

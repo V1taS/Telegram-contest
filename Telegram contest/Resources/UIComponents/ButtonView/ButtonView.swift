@@ -102,6 +102,10 @@ private extension ButtonView {
     topBorderGradientView.applyGradient(colors: appearance.whiteGradientColor)
     mainGradientView.applyGradient(colors: appearance.whiteGradientColor)
     bottomBorderGradientView.applyGradient(colors: appearance.whiteGradientColor)
+    
+    topBorderGradientView.isUserInteractionEnabled = false
+    mainGradientView.isUserInteractionEnabled = false
+    bottomBorderGradientView.isUserInteractionEnabled = false
   }
 }
 

@@ -27,19 +27,18 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
   
   // MARK: - Private variables
   
-  private let upperViewController: UIViewController
+  private let rootViewController: UIViewController
   private var mainScreenModule: MainScreenModule?
-  private var anyCoordinator: AnyObject?
   private let services: ApplicationServices
   
   // MARK: - Initialization
   
   /// - Parameters:
-  ///  - upperViewController: UINavigationController
+  ///  - rootViewController: UINavigationController
   ///  - services: Application services
-  init(_ upperViewController: UIViewController,
+  init(_ rootViewController: UIViewController,
        _ services: ApplicationServices) {
-    self.upperViewController = upperViewController
+    self.rootViewController = rootViewController
     self.services = services
   }
   
@@ -51,7 +50,7 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
     self.mainScreenModule?.moduleOutput = self
     
     mainScreenModule.modalPresentationStyle = .fullScreen
-    upperViewController.present(mainScreenModule, animated: false)
+    rootViewController.present(mainScreenModule, animated: false)
   }
 }
 
@@ -59,22 +58,6 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
 
 extension MainScreenCoordinator: MainScreenModuleOutput {}
 
-// MARK: - PermissionScreenCoordinatorOutput
-
-extension MainScreenCoordinator: PermissionScreenCoordinatorOutput {}
-
 // MARK: - Private
 
-private extension MainScreenCoordinator {
-  func startPermissionScreenCoordinator() {
-    guard let upperViewController = mainScreenModule else {
-      return
-    }
-    
-    let permissionScreenCoordinator = PermissionScreenCoordinator(upperViewController,
-                                                                  services)
-    permissionScreenCoordinator.output = self
-    anyCoordinator = permissionScreenCoordinator
-    permissionScreenCoordinator.start()
-  }
-}
+private extension MainScreenCoordinator {}

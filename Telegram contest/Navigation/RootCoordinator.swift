@@ -33,10 +33,46 @@ final class RootCoordinator: Coordinator {
       guard let self = self else {
         return
       }
-      
-      let permissionScreenCoordinator: Coordinator = PermissionScreenCoordinator(self.rootViewController, self.services)
-      self.coordinator = permissionScreenCoordinator
-      permissionScreenCoordinator.start()
+      self.checkAuthorizationStatus()
     }
+  }
+}
+
+// MARK: - MainScreenCoordinatorOutput
+
+extension RootCoordinator: MainScreenCoordinatorOutput {}
+
+// MARK: - PermissionScreenCoordinatorOutput
+
+extension RootCoordinator: PermissionScreenCoordinatorOutput {
+  func requestPhotosSuccess() {
+    startMainScreenCoordinator()
+  }
+}
+
+// MARK: - Private
+
+private extension RootCoordinator {
+  func checkAuthorizationStatus() {
+    if services.permissionService.isAuthorizationStatus() {
+      startMainScreenCoordinator()
+    } else {
+      startPermissionScreenCoordinator()
+    }
+  }
+  
+  
+  func startMainScreenCoordinator() {
+    let mainScreenCoordinator = MainScreenCoordinator(rootViewController, services)
+    self.coordinator = mainScreenCoordinator
+    mainScreenCoordinator.output = self
+    mainScreenCoordinator.start()
+  }
+  
+  func startPermissionScreenCoordinator() {
+    let permissionScreenCoordinator = PermissionScreenCoordinator(rootViewController, services)
+    self.coordinator = permissionScreenCoordinator
+    permissionScreenCoordinator.output = self
+    permissionScreenCoordinator.start()
   }
 }

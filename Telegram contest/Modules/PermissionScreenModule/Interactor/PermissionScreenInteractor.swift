@@ -8,10 +8,21 @@
 import UIKit
 
 /// Events that we send from Interactor to Presenter
-protocol PermissionScreenInteractorOutput: AnyObject {}
+protocol PermissionScreenInteractorOutput: AnyObject {
+  
+  /// Gallery accessed
+  func requestPhotosSuccess()
+  
+  /// Gallery not accessed
+  func requestPhotosError()
+}
 
 /// Events sent from Presenter to Interactor
-protocol PermissionScreenInteractorInput {}
+protocol PermissionScreenInteractorInput {
+  
+  /// Request access to the Gallery
+  func requestPhotosStatus()
+}
 
 /// Interactor
 final class PermissionScreenInteractor: PermissionScreenInteractorInput {
@@ -20,7 +31,30 @@ final class PermissionScreenInteractor: PermissionScreenInteractorInput {
   
   weak var output: PermissionScreenInteractorOutput?
   
+  // MARK: - Private properties
+  
+  private let permissionService: PermissionService
+  
+  // MARK: - Initialization
+  
+  /// Initializer
+  /// - Parameter permissionService: Service for working with permissions
+  init(permissionService: PermissionService) {
+    self.permissionService = permissionService
+  }
+  
   // MARK: - Internal func
+  
+  func requestPhotosStatus() {
+    permissionService.requestPhotos { [weak self] granted in
+      switch granted {
+      case true:
+        self?.output?.requestPhotosSuccess()
+      case false:
+        self?.output?.requestPhotosError()
+      }
+    }
+  }
 }
 
 // MARK: - Appearance

@@ -11,9 +11,10 @@ import UIKit
 final class PermissionScreenAssembly {
   
   /// Collects the `PermissionScreen` module
+  /// - Parameter permissionService: Service for working with permissions
   /// - Returns: Built module `PermissionScreen`
-  func createModule() -> PermissionScreenModule {
-    let interactor = PermissionScreenInteractor()
+  func createModule(permissionService: PermissionService) -> PermissionScreenModule {
+    let interactor = PermissionScreenInteractor(permissionService: permissionService)
     let view = PermissionScreenView()
     let factory = PermissionScreenFactory()
     let presenter = PermissionScreenViewController(moduleView: view,

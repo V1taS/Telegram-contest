@@ -9,7 +9,11 @@ import UIKit
 import Lottie
 
 /// Events that we send from View to Presenter
-protocol PermissionScreenViewOutput: AnyObject {}
+protocol PermissionScreenViewOutput: AnyObject {
+  
+  /// The button was pressed
+  func buttonAction()
+}
 
 /// Events that we send from Presenter to View
 protocol PermissionScreenViewInput: AnyObject {
@@ -120,6 +124,13 @@ private extension PermissionScreenView {
     logoImageView.contentMode = .scaleAspectFit
     logoImageView.loopMode = .loop
     logoImageView.animationSpeed = appearance.animationSpeed
+    
+    buttonView.addTarget(self, action: #selector(buttonViewAction), for: .touchUpInside)
+  }
+  
+  @objc
+  func buttonViewAction() {
+    output?.buttonAction()
   }
 }
 
