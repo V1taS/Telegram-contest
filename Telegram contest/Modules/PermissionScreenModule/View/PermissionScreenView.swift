@@ -6,12 +6,20 @@
 //
 
 import UIKit
+import Lottie
 
 /// Events that we send from View to Presenter
 protocol PermissionScreenViewOutput: AnyObject {}
 
 /// Events that we send from Presenter to View
-protocol PermissionScreenViewInput: AnyObject {}
+protocol PermissionScreenViewInput: AnyObject {
+  
+  /// Start logo animation
+  func startAnimationLogoView()
+  
+  /// Stop animation for logo
+  func stopAnimationLogoView()
+}
 
 /// Protocol alias UIView & PermissionScreenViewInput
 typealias PermissionScreenViewProtocol = UIView & PermissionScreenViewInput
@@ -27,6 +35,8 @@ final class PermissionScreenView: PermissionScreenViewProtocol {
   
   private let containerView = UIView()
   private let buttonView = ButtonView()
+  private let titleLabel = UILabel()
+  private let logoImageView = LottieAnimationView(name: Appearance().animationImage)
   
   // MARK: - Initialization
   
@@ -42,13 +52,23 @@ final class PermissionScreenView: PermissionScreenViewProtocol {
   }
   
   // MARK: - Internal func
+  
+  func startAnimationLogoView() {
+    logoImageView.play()
+  }
+  
+  func stopAnimationLogoView() {
+    logoImageView.stop()
+  }
 }
 
 // MARK: - Private
 
 private extension PermissionScreenView {
   func configureLayout() {
-    [buttonView].forEach {
+    let appearance = Appearance()
+    
+    [logoImageView, titleLabel, buttonView].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
       containerView.addSubview($0)
     }
@@ -59,20 +79,47 @@ private extension PermissionScreenView {
     }
     
     NSLayoutConstraint.activate([
+      logoImageView.widthAnchor.constraint(equalToConstant: appearance.logoImageSize.width),
+      logoImageView.heightAnchor.constraint(equalToConstant: appearance.logoImageSize.height),
+      
       containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
       containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
       containerView.centerYAnchor.constraint(equalTo: centerYAnchor),
       
-      buttonView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
-      buttonView.topAnchor.constraint(equalTo: containerView.topAnchor),
-      buttonView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
+      logoImageView.topAnchor.constraint(equalTo: containerView.topAnchor),
+      logoImageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+      
+      titleLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor,
+                                          constant: appearance.minInset),
+      titleLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor,
+                                      constant: appearance.middleInset),
+      titleLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor,
+                                           constant: -appearance.minInset),
+      
+      buttonView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor,
+                                          constant: appearance.minInset),
+      buttonView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,
+                                      constant: appearance.largeInset),
+      buttonView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor,
+                                           constant: -appearance.minInset),
       buttonView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
     ])
   }
   
   func applyDefaultBehavior() {
+    let appearance = Appearance()
+    
     backgroundColor = TGColor.primaryBlack
-    buttonView.setTitle("Allow Access", for: .normal)
+    buttonView.setTitle(appearance.buttonText, for: .normal)
+    
+    titleLabel.font = TGFont.proDisplaySemibold20
+    titleLabel.textAlignment = .center
+    titleLabel.text = appearance.titleText
+    titleLabel.textColor = TGColor.primaryWhite
+    
+    logoImageView.contentMode = .scaleAspectFit
+    logoImageView.loopMode = .loop
+    logoImageView.animationSpeed = appearance.animationSpeed
   }
 }
 
@@ -80,6 +127,14 @@ private extension PermissionScreenView {
 
 private extension PermissionScreenView {
   struct Appearance {
+    let titleText = "Access Your Photos and Videos"
+    let buttonText = "Allow Access"
+    let animationSpeed = 0.5
     
+    let minInset: CGFloat = 16
+    let middleInset: CGFloat = 20
+    let largeInset: CGFloat = 28
+    let logoImageSize = CGSize(width: 144, height: 144)
+    let animationImage = "duck"
   }
 }

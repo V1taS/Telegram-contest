@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B7D5E2028F6C3D700FB3AB7 /* duck.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B7D5E1F28F6C3D700FB3AB7 /* duck.json */; };
+		1B7D5E2728F6C86000FB3AB7 /* backToCancel.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B7D5E2528F6C86000FB3AB7 /* backToCancel.json */; };
+		1B7D5E2828F6C86000FB3AB7 /* backToCancel.tgs in Resources */ = {isa = PBXBuildFile; fileRef = 1B7D5E2628F6C86000FB3AB7 /* backToCancel.tgs */; };
+		1B7D5E2B28F6CADD00FB3AB7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1B7D5E2A28F6CADD00FB3AB7 /* Lottie */; };
 		1BDFABFC28F5641C00DB536A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFABFB28F5641C00DB536A /* AppDelegate.swift */; };
 		1BDFABFE28F5641C00DB536A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFABFD28F5641C00DB536A /* SceneDelegate.swift */; };
 		1BDFAC0528F5641D00DB536A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDFAC0428F5641D00DB536A /* Assets.xcassets */; };
@@ -41,6 +45,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B7D5E1F28F6C3D700FB3AB7 /* duck.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = duck.json; sourceTree = "<group>"; };
+		1B7D5E2128F6C4E800FB3AB7 /* duck.tgs */ = {isa = PBXFileReference; lastKnownFileType = file; path = duck.tgs; sourceTree = "<group>"; };
+		1B7D5E2528F6C86000FB3AB7 /* backToCancel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = backToCancel.json; sourceTree = "<group>"; };
+		1B7D5E2628F6C86000FB3AB7 /* backToCancel.tgs */ = {isa = PBXFileReference; lastKnownFileType = file; path = backToCancel.tgs; sourceTree = "<group>"; };
 		1BDFABF828F5641C00DB536A /* Telegram contest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telegram contest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDFABFB28F5641C00DB536A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BDFABFD28F5641C00DB536A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,12 +89,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B7D5E2B28F6CADD00FB3AB7 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B7D5E2228F6C7A300FB3AB7 /* JsonAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D5E2428F6C85100FB3AB7 /* BackToCancel */,
+				1B7D5E2328F6C7F300FB3AB7 /* Sticker */,
+			);
+			path = JsonAnimation;
+			sourceTree = "<group>";
+		};
+		1B7D5E2328F6C7F300FB3AB7 /* Sticker */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D5E2128F6C4E800FB3AB7 /* duck.tgs */,
+				1B7D5E1F28F6C3D700FB3AB7 /* duck.json */,
+			);
+			path = Sticker;
+			sourceTree = "<group>";
+		};
+		1B7D5E2428F6C85100FB3AB7 /* BackToCancel */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D5E2528F6C86000FB3AB7 /* backToCancel.json */,
+				1B7D5E2628F6C86000FB3AB7 /* backToCancel.tgs */,
+			);
+			path = BackToCancel;
+			sourceTree = "<group>";
+		};
 		1BDFABEF28F5641B00DB536A = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +262,7 @@
 		1BDFAC3128F56A6400DB536A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1B7D5E2228F6C7A300FB3AB7 /* JsonAnimation */,
 				1BDFAC5B28F5DDF800DB536A /* Fonts */,
 				1BDFAC5228F58A1900DB536A /* UIComponents */,
 				1BDFAC5128F589F600DB536A /* Images */,
@@ -382,6 +419,9 @@
 			dependencies = (
 			);
 			name = "Telegram contest";
+			packageProductDependencies = (
+				1B7D5E2A28F6CADD00FB3AB7 /* Lottie */,
+			);
 			productName = "Telegram contest";
 			productReference = 1BDFABF828F5641C00DB536A /* Telegram contest.app */;
 			productType = "com.apple.product-type.application";
@@ -410,6 +450,9 @@
 				Base,
 			);
 			mainGroup = 1BDFABEF28F5641B00DB536A;
+			packageReferences = (
+				1B7D5E2928F6CADD00FB3AB7 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 1BDFABF928F5641C00DB536A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -425,7 +468,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BDFAC0828F5641D00DB536A /* LaunchScreen.storyboard in Resources */,
+				1B7D5E2828F6C86000FB3AB7 /* backToCancel.tgs in Resources */,
+				1B7D5E2028F6C3D700FB3AB7 /* duck.json in Resources */,
 				1BDFAC0528F5641D00DB536A /* Assets.xcassets in Resources */,
+				1B7D5E2728F6C86000FB3AB7 /* backToCancel.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +718,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B7D5E2928F6CADD00FB3AB7 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B7D5E2A28F6CADD00FB3AB7 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B7D5E2928F6CADD00FB3AB7 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1BDFABF028F5641B00DB536A /* Project object */;
 }

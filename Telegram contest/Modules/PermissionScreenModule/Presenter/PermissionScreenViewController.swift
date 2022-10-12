@@ -63,6 +63,18 @@ final class PermissionScreenViewController: PermissionScreenModule {
     
     // TODO: - ...
   }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    moduleView.startAnimationLogoView()
+  }
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    
+    moduleView.stopAnimationLogoView()
+  }
 }
 
 // MARK: - PermissionScreenViewOutput
