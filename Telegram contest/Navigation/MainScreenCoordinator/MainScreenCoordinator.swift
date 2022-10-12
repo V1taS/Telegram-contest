@@ -27,7 +27,7 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
   
   // MARK: - Private variables
   
-  private let navigationController: UINavigationController
+  private let upperViewController: UIViewController
   private var mainScreenModule: MainScreenModule?
   private var anyCoordinator: AnyObject?
   private let services: ApplicationServices
@@ -35,11 +35,11 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
   // MARK: - Initialization
   
   /// - Parameters:
-  ///  - navigationController: UINavigationController
+  ///  - upperViewController: UINavigationController
   ///  - services: Application services
-  init(_ navigationController: UINavigationController,
+  init(_ upperViewController: UIViewController,
        _ services: ApplicationServices) {
-    self.navigationController = navigationController
+    self.upperViewController = upperViewController
     self.services = services
   }
   
@@ -50,11 +50,8 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
     self.mainScreenModule = mainScreenModule
     self.mainScreenModule?.moduleOutput = self
     
-    navigationController.pushViewController(mainScreenModule, animated: true)
-    
-    if !services.permissionService.isAuthorizationStatus() {
-      startPermissionScreenCoordinator()
-    }
+    mainScreenModule.modalPresentationStyle = .fullScreen
+    upperViewController.present(mainScreenModule, animated: false)
   }
 }
 
@@ -70,7 +67,11 @@ extension MainScreenCoordinator: PermissionScreenCoordinatorOutput {}
 
 private extension MainScreenCoordinator {
   func startPermissionScreenCoordinator() {
-    let permissionScreenCoordinator = PermissionScreenCoordinator(navigationController,
+    guard let upperViewController = mainScreenModule else {
+      return
+    }
+    
+    let permissionScreenCoordinator = PermissionScreenCoordinator(upperViewController,
                                                                   services)
     permissionScreenCoordinator.output = self
     anyCoordinator = permissionScreenCoordinator

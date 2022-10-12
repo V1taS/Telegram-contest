@@ -12,8 +12,13 @@ final class ButtonView: UIButton {
   
   // MARK: - Private property
   
-  private let gradientView = GradientView()
-  private var gradientViewLeadingAnchor: NSLayoutConstraint?
+  private let mainGradientView = GradientView()
+  private let topBorderGradientView = GradientView()
+  private let bottomBorderGradientView = GradientView()
+  
+  private var mainGradientViewLeadingAnchor: NSLayoutConstraint?
+  private var topBorderGradientViewLeadingAnchor: NSLayoutConstraint?
+  private var bottomBorderGradientViewLeadingAnchor: NSLayoutConstraint?
   
   // MARK: - Initialization
   
@@ -31,45 +36,72 @@ final class ButtonView: UIButton {
   override func layoutSubviews() {
     super.layoutSubviews()
     
-    if gradientViewLeadingAnchor == nil {
-      gradientViewLeadingAnchor = gradientView.leadingAnchor.constraint(
-        equalTo: leadingAnchor,
-        constant: -(bounds.width * Appearance().gradientleadingMultipleView)
-      )
-      gradientViewLeadingAnchor?.isActive = true
-    }
+    updateLocationForGradientView()
   }
-  
-  // MARK: - Internal func
 }
 
 // MARK: - Private
 
 private extension ButtonView {
+  func updateLocationForGradientView() {
+    if mainGradientViewLeadingAnchor == nil {
+      mainGradientViewLeadingAnchor = mainGradientView.leadingAnchor.constraint(
+        equalTo: leadingAnchor,
+        constant: -(bounds.width * Appearance().gradientleadingMultipleView)
+      )
+      mainGradientViewLeadingAnchor?.isActive = true
+    }
+    
+    if topBorderGradientViewLeadingAnchor == nil {
+      topBorderGradientViewLeadingAnchor = topBorderGradientView.leadingAnchor.constraint(
+        equalTo: leadingAnchor,
+        constant: -(bounds.width * Appearance().gradientleadingMultipleView)
+      )
+      topBorderGradientViewLeadingAnchor?.isActive = true
+    }
+    
+    if bottomBorderGradientViewLeadingAnchor == nil {
+      bottomBorderGradientViewLeadingAnchor = bottomBorderGradientView.leadingAnchor.constraint(
+        equalTo: leadingAnchor,
+        constant: -(bounds.width * Appearance().gradientleadingMultipleView)
+      )
+      bottomBorderGradientViewLeadingAnchor?.isActive = true
+    }
+  }
+  
   func configureLayout() {
-    [gradientView].forEach {
+    let appearance = Appearance()
+    
+    [topBorderGradientView, mainGradientView, bottomBorderGradientView].forEach {
       $0.translatesAutoresizingMaskIntoConstraints = false
       addSubview($0)
     }
     
     NSLayoutConstraint.activate([
       heightAnchor.constraint(equalToConstant: Appearance().contentHeight),
-      gradientView.widthAnchor.constraint(equalTo: widthAnchor),
+      topBorderGradientView.widthAnchor.constraint(equalTo: widthAnchor),
+      topBorderGradientView.heightAnchor.constraint(equalToConstant: appearance.borderHeight),
+      bottomBorderGradientView.widthAnchor.constraint(equalTo: widthAnchor),
+      bottomBorderGradientView.heightAnchor.constraint(equalToConstant: appearance.borderHeight),
+      mainGradientView.widthAnchor.constraint(equalTo: widthAnchor),
       
-      gradientView.topAnchor.constraint(equalTo: topAnchor),
-      gradientView.bottomAnchor.constraint(equalTo: bottomAnchor)
+      topBorderGradientView.topAnchor.constraint(equalTo: topAnchor),
+      mainGradientView.topAnchor.constraint(equalTo: topAnchor),
+      mainGradientView.bottomAnchor.constraint(equalTo: bottomAnchor),
+      bottomBorderGradientView.bottomAnchor.constraint(equalTo: bottomAnchor)
     ])
   }
   
   func applyDefaultBehavior() {
     let appearance = Appearance()
-    
     backgroundColor = TGColor.primaryBlue
     layer.cornerRadius = Appearance().cornerRadius
     setTitleColor(TGColor.primaryWhite, for: .normal)
     titleLabel?.font = TGFont.proTextSemibold17
     
-    gradientView.applyGradient(colors: appearance.whiteGradientColor)
+    topBorderGradientView.applyGradient(colors: appearance.whiteGradientColor)
+    mainGradientView.applyGradient(colors: appearance.whiteGradientColor)
+    bottomBorderGradientView.applyGradient(colors: appearance.whiteGradientColor)
   }
 }
 
@@ -77,6 +109,7 @@ private extension ButtonView {
 
 private extension ButtonView {
   struct Appearance {
+    let borderHeight: CGFloat = 1.33
     let contentHeight: CGFloat = 50
     let cornerRadius: CGFloat = 10
     let gradientleadingMultipleView = 0.25

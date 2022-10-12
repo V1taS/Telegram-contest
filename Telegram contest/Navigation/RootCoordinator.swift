@@ -12,10 +12,9 @@ final class RootCoordinator: Coordinator {
   // MARK: - Private variables
   
   private let window: UIWindow
-  private let navigationController = UINavigationController()
+  private let rootViewController = UIViewController()
   private var coordinator: Coordinator?
   private let services: ApplicationServices = ApplicationServicesImpl()
-  
   
   // MARK: - Initialization
   
@@ -27,11 +26,17 @@ final class RootCoordinator: Coordinator {
   // MARK: - Internal func
   
   func start() {
-    let mainScreenCoordinator: Coordinator = MainScreenCoordinator(navigationController, services)
-    self.coordinator = mainScreenCoordinator
-    mainScreenCoordinator.start()
-    
+    window.rootViewController = rootViewController
     window.makeKeyAndVisible()
-    window.rootViewController = navigationController
+    
+    DispatchQueue.main.async { [weak self] in
+      guard let self = self else {
+        return
+      }
+      
+      let permissionScreenCoordinator: Coordinator = PermissionScreenCoordinator(self.rootViewController, self.services)
+      self.coordinator = permissionScreenCoordinator
+      permissionScreenCoordinator.start()
+    }
   }
 }

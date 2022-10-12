@@ -27,18 +27,18 @@ final class PermissionScreenCoordinator: PermissionScreenCoordinatorProtocol {
   
   // MARK: - Private variables
   
-  private let navigationController: UINavigationController
+  private let upperViewController: UIViewController
   private var permissionScreenModule: PermissionScreenModule?
   private let services: ApplicationServices
   
   // MARK: - Initialization
   
   /// - Parameters:
-  ///  - navigationController: UINavigationController
+  ///  - upperViewController: UINavigationController
   ///  - services: Application services
-  init(_ navigationController: UINavigationController,
+  init(_ upperViewController: UIViewController,
        _ services: ApplicationServices) {
-    self.navigationController = navigationController
+    self.upperViewController = upperViewController
     self.services = services
   }
   
@@ -48,8 +48,9 @@ final class PermissionScreenCoordinator: PermissionScreenCoordinatorProtocol {
     let permissionScreenModule = PermissionScreenAssembly().createModule()
     self.permissionScreenModule = permissionScreenModule
     self.permissionScreenModule?.moduleOutput = self
+    permissionScreenModule.modalPresentationStyle = .fullScreen
     
-    navigationController.pushViewController(permissionScreenModule, animated: true)
+    upperViewController.present(permissionScreenModule, animated: false)
   }
 }
 
