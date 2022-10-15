@@ -40,8 +40,7 @@ final class MainScreenCollectionViewCell: UICollectionViewCell {
   /// Setting up a cell
   /// - Parameter asset: A representation of an image, video, or Live Photo in the Photos library.
   func configureCellWith(_ asset: PHAsset) {
-    fetchImageAsset(asset,
-                    targetSize: .init(width: 300, height: 300)) { [weak self] image in
+    asset.fetchImage(targetSize: .init(width: 300, height: 300)) { [weak self] image in
       guard let self = self else {
         return
       }
@@ -72,23 +71,6 @@ private extension MainScreenCollectionViewCell {
     
     imageView.contentMode = .scaleAspectFill
     imageView.clipsToBounds = true
-  }
-  
-  func fetchImageAsset(_ asset: PHAsset,
-                       targetSize size: CGSize,
-                       contentMode: PHImageContentMode = .aspectFit,
-                       options: PHImageRequestOptions? = nil,
-                       completion: ((UIImage?) -> Void)?) {
-    let resultHandler: (UIImage?, [AnyHashable: Any]?) -> Void = { image, info in
-      completion?(image)
-    }
-
-    PHImageManager.default().requestImage(
-      for: asset,
-      targetSize: size,
-      contentMode: contentMode,
-      options: options,
-      resultHandler: resultHandler)
   }
 }
 

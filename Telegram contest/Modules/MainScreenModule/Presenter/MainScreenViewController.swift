@@ -9,7 +9,14 @@ import UIKit
 import Photos
 
 /// Events that we send from `current module` to `another module`
-protocol MainScreenModuleOutput: AnyObject {}
+protocol MainScreenModuleOutput: AnyObject {
+  
+  /// An image has been selected
+  /// - Parameters:
+  ///  - image: Image
+  ///  - indexPath: Image index
+  func didSelectImage(_ image: UIImage?, at indexPath: IndexPath)
+}
 
 /// Events sent from `another module` to `current module`
 protocol MainScreenModuleInput {
@@ -68,7 +75,11 @@ final class MainScreenViewController: MainScreenModule {
 
 // MARK: - MainScreenViewOutput
 
-extension MainScreenViewController: MainScreenViewOutput {}
+extension MainScreenViewController: MainScreenViewOutput {
+  func didSelectImage(_ image: UIImage?, at indexPath: IndexPath) {
+    moduleOutput?.didSelectImage(image, at: indexPath)
+  }
+}
 
 // MARK: - MainScreenInteractorOutput
 

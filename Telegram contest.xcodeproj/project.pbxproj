@@ -12,6 +12,13 @@
 		1B7D5E2828F6C86000FB3AB7 /* backToCancel.tgs in Resources */ = {isa = PBXBuildFile; fileRef = 1B7D5E2628F6C86000FB3AB7 /* backToCancel.tgs */; };
 		1B7D5E2B28F6CADD00FB3AB7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1B7D5E2A28F6CADD00FB3AB7 /* Lottie */; };
 		1B7D5E2D28F6E71300FB3AB7 /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D5E2C28F6E71300FB3AB7 /* MainScreenCollectionViewCell.swift */; };
+		1BDBCBD428FAB4C800E33FF4 /* EditImageScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDBCBCF28FAB4C800E33FF4 /* EditImageScreenFactory.swift */; };
+		1BDBCBD528FAB4C800E33FF4 /* EditImageScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDBCBD028FAB4C800E33FF4 /* EditImageScreenViewController.swift */; };
+		1BDBCBD628FAB4C800E33FF4 /* EditImageScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDBCBD128FAB4C800E33FF4 /* EditImageScreenAssembly.swift */; };
+		1BDBCBD728FAB4C800E33FF4 /* EditImageScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDBCBD228FAB4C800E33FF4 /* EditImageScreenInteractor.swift */; };
+		1BDBCBD828FAB4C800E33FF4 /* EditImageScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDBCBD328FAB4C800E33FF4 /* EditImageScreenView.swift */; };
+		1BDBCBE028FAB7FD00E33FF4 /* EditImageScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDBCBDF28FAB7FD00E33FF4 /* EditImageScreenCoordinator.swift */; };
+		1BDBCBE228FABEF900E33FF4 /* PHAsset+FetchImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDBCBE128FABEF900E33FF4 /* PHAsset+FetchImage.swift */; };
 		1BDFABFC28F5641C00DB536A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFABFB28F5641C00DB536A /* AppDelegate.swift */; };
 		1BDFABFE28F5641C00DB536A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFABFD28F5641C00DB536A /* SceneDelegate.swift */; };
 		1BDFAC0528F5641D00DB536A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDFAC0428F5641D00DB536A /* Assets.xcassets */; };
@@ -51,6 +58,13 @@
 		1B7D5E2528F6C86000FB3AB7 /* backToCancel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = backToCancel.json; sourceTree = "<group>"; };
 		1B7D5E2628F6C86000FB3AB7 /* backToCancel.tgs */ = {isa = PBXFileReference; lastKnownFileType = file; path = backToCancel.tgs; sourceTree = "<group>"; };
 		1B7D5E2C28F6E71300FB3AB7 /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		1BDBCBCF28FAB4C800E33FF4 /* EditImageScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageScreenFactory.swift; sourceTree = "<group>"; };
+		1BDBCBD028FAB4C800E33FF4 /* EditImageScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageScreenViewController.swift; sourceTree = "<group>"; };
+		1BDBCBD128FAB4C800E33FF4 /* EditImageScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageScreenAssembly.swift; sourceTree = "<group>"; };
+		1BDBCBD228FAB4C800E33FF4 /* EditImageScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageScreenInteractor.swift; sourceTree = "<group>"; };
+		1BDBCBD328FAB4C800E33FF4 /* EditImageScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageScreenView.swift; sourceTree = "<group>"; };
+		1BDBCBDF28FAB7FD00E33FF4 /* EditImageScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditImageScreenCoordinator.swift; sourceTree = "<group>"; };
+		1BDBCBE128FABEF900E33FF4 /* PHAsset+FetchImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHAsset+FetchImage.swift"; sourceTree = "<group>"; };
 		1BDFABF828F5641C00DB536A /* Telegram contest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telegram contest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDFABFB28F5641C00DB536A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BDFABFD28F5641C00DB536A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +139,74 @@
 			path = BackToCancel;
 			sourceTree = "<group>";
 		};
+		1BDBCBCE28FAB49300E33FF4 /* EditImageScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				1BDBCBDD28FAB4E900E33FF4 /* View */,
+				1BDBCBDC28FAB4E300E33FF4 /* Presenter */,
+				1BDBCBDB28FAB4DC00E33FF4 /* Assembly */,
+				1BDBCBDA28FAB4D500E33FF4 /* Factory */,
+				1BDBCBD928FAB4CE00E33FF4 /* Interactor */,
+			);
+			path = EditImageScreenModule;
+			sourceTree = "<group>";
+		};
+		1BDBCBD928FAB4CE00E33FF4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1BDBCBD228FAB4C800E33FF4 /* EditImageScreenInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1BDBCBDA28FAB4D500E33FF4 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				1BDBCBCF28FAB4C800E33FF4 /* EditImageScreenFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		1BDBCBDB28FAB4DC00E33FF4 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				1BDBCBD128FAB4C800E33FF4 /* EditImageScreenAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		1BDBCBDC28FAB4E300E33FF4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1BDBCBD028FAB4C800E33FF4 /* EditImageScreenViewController.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1BDBCBDD28FAB4E900E33FF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1BDBCBD328FAB4C800E33FF4 /* EditImageScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1BDBCBDE28FAB7EB00E33FF4 /* EditImageScreenCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1BDBCBDF28FAB7FD00E33FF4 /* EditImageScreenCoordinator.swift */,
+			);
+			path = EditImageScreenCoordinator;
+			sourceTree = "<group>";
+		};
+		1BDBCBE328FABF0200E33FF4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1BDBCBE128FABEF900E33FF4 /* PHAsset+FetchImage.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		1BDFABEF28F5641B00DB536A = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +249,7 @@
 		1BDFAC1028F5648700DB536A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				1BDBCBCE28FAB49300E33FF4 /* EditImageScreenModule */,
 				1BDFAC3228F5791500DB536A /* PermissionScreenModule */,
 				1BDFAC1F28F5668100DB536A /* MainScreenModule */,
 			);
@@ -185,6 +268,7 @@
 		1BDFAC1228F5649700DB536A /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				1BDBCBDE28FAB7EB00E33FF4 /* EditImageScreenCoordinator */,
 				1BDFAC4228F57B1900DB536A /* PermissionScreenCoordinator */,
 				1BDFAC1C28F5662F00DB536A /* MainScreenCoordinator */,
 				1BDFAC1328F564A600DB536A /* Coordinator.swift */,
@@ -357,6 +441,7 @@
 		1BDFAC5128F589F600DB536A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1BDBCBE328FABF0200E33FF4 /* Extension */,
 				1BDFAC0428F5641D00DB536A /* Assets.xcassets */,
 			);
 			path = Images;
@@ -485,10 +570,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BDBCBE028FAB7FD00E33FF4 /* EditImageScreenCoordinator.swift in Sources */,
 				1BDFAC2728F566A500DB536A /* MainScreenFactory.swift in Sources */,
 				1BDFAC4428F57B2E00DB536A /* PermissionScreenCoordinator.swift in Sources */,
 				1BDFAC6428F5DE7300DB536A /* UIFont+Guide.swift in Sources */,
 				1BDFAC6228F5DE5B00DB536A /* FontToken.swift in Sources */,
+				1BDBCBD628FAB4C800E33FF4 /* EditImageScreenAssembly.swift in Sources */,
 				1BDFAC5728F58A5100DB536A /* ButtonView.swift in Sources */,
 				1BDFAC5E28F5DE1C00DB536A /* UIFont+DynamicProvider.swift in Sources */,
 				1BDFAC2928F566A500DB536A /* MainScreenAssembly.swift in Sources */,
@@ -499,6 +586,7 @@
 				1BDFAC4828F586BE00DB536A /* UIColor+DynamicProvider.swift in Sources */,
 				1BDFAC5028F5875000DB536A /* UIColor+Guide.swift in Sources */,
 				1BDFAC2A28F566A500DB536A /* MainScreenInteractor.swift in Sources */,
+				1BDBCBE228FABEF900E33FF4 /* PHAsset+FetchImage.swift in Sources */,
 				1BDFAC4A28F586E000DB536A /* UIColor+Hex.swift in Sources */,
 				1B7D5E2D28F6E71300FB3AB7 /* MainScreenCollectionViewCell.swift in Sources */,
 				1BDFAC1B28F5659300DB536A /* PermissionService.swift in Sources */,
@@ -507,12 +595,16 @@
 				1BDFAC2828F566A500DB536A /* MainScreenViewController.swift in Sources */,
 				1BDFAC1628F564D400DB536A /* RootCoordinator.swift in Sources */,
 				1BDFABFC28F5641C00DB536A /* AppDelegate.swift in Sources */,
+				1BDBCBD528FAB4C800E33FF4 /* EditImageScreenViewController.swift in Sources */,
 				1BDFABFE28F5641C00DB536A /* SceneDelegate.swift in Sources */,
+				1BDBCBD428FAB4C800E33FF4 /* EditImageScreenFactory.swift in Sources */,
+				1BDBCBD728FAB4C800E33FF4 /* EditImageScreenInteractor.swift in Sources */,
 				1BDFAC1E28F5663C00DB536A /* MainScreenCoordinator.swift in Sources */,
 				1BDFAC4C28F5871800DB536A /* ColorToken.swift in Sources */,
 				1BDFAC3C28F5793300DB536A /* PermissionScreenView.swift in Sources */,
 				1BDFAC5928F5D13500DB536A /* GradientView.swift in Sources */,
 				1BDFAC6028F5DE4600DB536A /* FontGuide.swift in Sources */,
+				1BDBCBD828FAB4C800E33FF4 /* EditImageScreenView.swift in Sources */,
 				1BDFAC3B28F5793300DB536A /* PermissionScreenInteractor.swift in Sources */,
 				1BDFAC2B28F566A500DB536A /* MainScreenView.swift in Sources */,
 			);

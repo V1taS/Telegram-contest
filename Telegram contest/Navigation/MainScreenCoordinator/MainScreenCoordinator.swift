@@ -29,6 +29,7 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
   
   private let rootViewController: UIViewController
   private var mainScreenModule: MainScreenModule?
+  private var coordinator: Coordinator?
   private let services: ApplicationServices
   
   // MARK: - Initialization
@@ -56,8 +57,27 @@ final class MainScreenCoordinator: MainScreenCoordinatorProtocol {
 
 // MARK: - MainScreenModuleOutput
 
-extension MainScreenCoordinator: MainScreenModuleOutput {}
+extension MainScreenCoordinator: MainScreenModuleOutput {
+  func didSelectImage(_ image: UIImage?, at indexPath: IndexPath) {
+    startEditImageScreenCoordinator()
+  }
+}
+
+// MARK: - EditImageScreenCoordinatorOutput
+
+extension MainScreenCoordinator: EditImageScreenCoordinatorOutput {}
 
 // MARK: - Private
 
-private extension MainScreenCoordinator {}
+private extension MainScreenCoordinator {
+  func startEditImageScreenCoordinator() {
+    guard let upperViewController = mainScreenModule else {
+      return
+    }
+    
+    let editImageScreenCoordinator = EditImageScreenCoordinator(upperViewController, services)
+    self.coordinator = editImageScreenCoordinator
+    editImageScreenCoordinator.output = self
+    editImageScreenCoordinator.start()
+  }
+}

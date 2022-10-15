@@ -9,7 +9,14 @@ import UIKit
 import Photos
 
 /// Events that we send from View to Presenter
-protocol MainScreenViewOutput: AnyObject {}
+protocol MainScreenViewOutput: AnyObject {
+  
+  /// An image has been selected
+  /// - Parameters:
+  ///  - image: Image
+  ///  - indexPath: Image index
+  func didSelectImage(_ image: UIImage?, at indexPath: IndexPath)
+}
 
 /// Events that we send from Presenter to View
 protocol MainScreenViewInput: AnyObject {
@@ -76,7 +83,15 @@ final class MainScreenView: MainScreenViewProtocol {
 // MARK: - UICollectionViewDelegate
 
 extension MainScreenView: UICollectionViewDelegate {
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let image = models[indexPath.row]
+    image.fetchImage(targetSize: .init(width: 300, height: 300)) { [weak self] image in
+      guard let self = self else {
+        return
+      }
+      self.output?.didSelectImage(image, at: indexPath)
+    }
+  }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -213,7 +228,7 @@ private extension MainScreenView {
                                    height: (UIScreen.main.bounds.width / 5) - 1)
     let twelvePicturesInRow = CGSize(width: (UIScreen.main.bounds.width / 12) - 1,
                                      height: (UIScreen.main.bounds.width / 12) - 1)
-    let minimumInteritemSpacing = 1
-    let minimumLineSpacing = 1
+    let minimumInteritemSpacing: CGFloat = 1
+    let minimumLineSpacing: CGFloat = 1
   }
 }
