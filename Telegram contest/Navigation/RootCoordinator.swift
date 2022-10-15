@@ -26,6 +26,7 @@ final class RootCoordinator: Coordinator {
   // MARK: - Internal func
   
   func start() {
+    window.overrideUserInterfaceStyle = .dark
     window.rootViewController = rootViewController
     window.makeKeyAndVisible()
     

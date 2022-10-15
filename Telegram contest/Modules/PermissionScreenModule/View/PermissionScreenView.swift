@@ -113,13 +113,13 @@ private extension PermissionScreenView {
   func applyDefaultBehavior() {
     let appearance = Appearance()
     
-    backgroundColor = TGColor.primaryBlack
+    backgroundColor = TGColor.primaryWhite
     buttonView.setTitle(appearance.buttonText, for: .normal)
     
     titleLabel.font = TGFont.proDisplaySemibold20
     titleLabel.textAlignment = .center
     titleLabel.text = appearance.titleText
-    titleLabel.textColor = TGColor.primaryWhite
+    titleLabel.textColor = TGColor.primaryBlack
     
     logoImageView.contentMode = .scaleAspectFit
     logoImageView.loopMode = .loop

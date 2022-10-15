@@ -11,6 +11,7 @@
 		1B7D5E2728F6C86000FB3AB7 /* backToCancel.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B7D5E2528F6C86000FB3AB7 /* backToCancel.json */; };
 		1B7D5E2828F6C86000FB3AB7 /* backToCancel.tgs in Resources */ = {isa = PBXBuildFile; fileRef = 1B7D5E2628F6C86000FB3AB7 /* backToCancel.tgs */; };
 		1B7D5E2B28F6CADD00FB3AB7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1B7D5E2A28F6CADD00FB3AB7 /* Lottie */; };
+		1B7D5E2D28F6E71300FB3AB7 /* MainScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D5E2C28F6E71300FB3AB7 /* MainScreenCollectionViewCell.swift */; };
 		1BDFABFC28F5641C00DB536A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFABFB28F5641C00DB536A /* AppDelegate.swift */; };
 		1BDFABFE28F5641C00DB536A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDFABFD28F5641C00DB536A /* SceneDelegate.swift */; };
 		1BDFAC0528F5641D00DB536A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BDFAC0428F5641D00DB536A /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		1B7D5E2128F6C4E800FB3AB7 /* duck.tgs */ = {isa = PBXFileReference; lastKnownFileType = file; path = duck.tgs; sourceTree = "<group>"; };
 		1B7D5E2528F6C86000FB3AB7 /* backToCancel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = backToCancel.json; sourceTree = "<group>"; };
 		1B7D5E2628F6C86000FB3AB7 /* backToCancel.tgs */ = {isa = PBXFileReference; lastKnownFileType = file; path = backToCancel.tgs; sourceTree = "<group>"; };
+		1B7D5E2C28F6E71300FB3AB7 /* MainScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		1BDFABF828F5641C00DB536A /* Telegram contest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Telegram contest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BDFABFB28F5641C00DB536A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BDFABFD28F5641C00DB536A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				1BDFAC2628F566A500DB536A /* MainScreenView.swift */,
+				1B7D5E2C28F6E71300FB3AB7 /* MainScreenCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				1BDFAC5028F5875000DB536A /* UIColor+Guide.swift in Sources */,
 				1BDFAC2A28F566A500DB536A /* MainScreenInteractor.swift in Sources */,
 				1BDFAC4A28F586E000DB536A /* UIColor+Hex.swift in Sources */,
+				1B7D5E2D28F6E71300FB3AB7 /* MainScreenCollectionViewCell.swift in Sources */,
 				1BDFAC1B28F5659300DB536A /* PermissionService.swift in Sources */,
 				1BDFAC3928F5793300DB536A /* PermissionScreenViewController.swift in Sources */,
 				1BDFAC4E28F5873800DB536A /* ColorGuide.swift in Sources */,

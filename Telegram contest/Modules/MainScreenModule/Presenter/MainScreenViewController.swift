@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 /// Events that we send from `current module` to `another module`
 protocol MainScreenModuleOutput: AnyObject {}
@@ -61,7 +62,7 @@ final class MainScreenViewController: MainScreenModule {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // TODO: - ...
+    interactor.getContent()
   }
 }
 
@@ -71,7 +72,11 @@ extension MainScreenViewController: MainScreenViewOutput {}
 
 // MARK: - MainScreenInteractorOutput
 
-extension MainScreenViewController: MainScreenInteractorOutput {}
+extension MainScreenViewController: MainScreenInteractorOutput {
+  func didReceive(allImages: PHFetchResult<PHAsset>) {
+    moduleView.configureCellsWith(models: allImages)
+  }
+}
 
 // MARK: - MainScreenFactoryOutput
 

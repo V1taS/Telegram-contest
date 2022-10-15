@@ -96,7 +96,7 @@ private extension ButtonView {
     let appearance = Appearance()
     backgroundColor = TGColor.primaryBlue
     layer.cornerRadius = Appearance().cornerRadius
-    setTitleColor(TGColor.primaryWhite, for: .normal)
+    setTitleColor(TGColor.primaryBlack, for: .normal)
     titleLabel?.font = TGFont.proTextSemibold17
     
     topBorderGradientView.applyGradient(colors: appearance.whiteGradientColor)
